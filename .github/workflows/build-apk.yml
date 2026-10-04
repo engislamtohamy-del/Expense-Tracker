@@ -18,7 +18,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - uses: android-actions/setup-android@v3
+      # ubuntu-latest already ships the Android SDK, so no SDK setup step is needed.
       - run: npm ci
       - run: npm run typecheck && npm test
       # Generates android/ (Continuous Native Generation); it is not committed.
